@@ -1,0 +1,39 @@
+registrieren:
+
+http://localhost:3000/api/auth/register
+
+{
+  "email": "acelga@veggie.com",
+  "password": "veggie123",
+  "role": ""
+}
+
+http://localhost:3000/api/auth/login
+
+{
+  "email": "acelga@veggie.com",
+  "password": "veggie123"
+}
+
+ouput:
+{
+  "user": {
+    "_id": "6737235e60d5a649482b759a",
+    "email": "acelga@veggie.com",
+    "verified": true,
+    "verificationToken": "0c786b19f682c27c6f7517a81ecdc88604930f6a92983dff791430539bbf6db8",
+    "tokenExpiresAt": "2024-11-16T10:33:02.588Z",
+    "role": "user",
+    "__v": 0
+  },
+
+  GET: http://localhost:3000/api/auth/verify/0c786b1... // add here tokenExpiresAt
+
+
+  POST: http://localhost:3000/api/posts
+  {
+  "title": "Rezepte",
+  "post": "mehl, zucker, eier",
+  "author": "6737235e60d5a649482b759a"
+}
+
