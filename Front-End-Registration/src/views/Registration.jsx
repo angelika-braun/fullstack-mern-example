@@ -9,7 +9,7 @@ const Registration = () => {
       function onSubmit(e) {
           e.preventDefault();
   
-          fetch('https://fullstack-mern-example.onrender.com/api/auth/register', {
+          fetch('https://fullstack-mern-example-mk3x.onrender.com/api/auth/register', {
               method: 'POST', 
               headers: {
                 'Content-Type': 'application/json'
