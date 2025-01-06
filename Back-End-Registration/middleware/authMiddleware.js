@@ -6,8 +6,6 @@ export async function authMiddleware(req, res, next) {
   if (!authHeader) {
     return res.status(401).send();
   }
-  // Beispiel Inhalt: Bearer bGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydGVtQG.sdfsodkfpoksd
-  // nehme dir den letzten Teil aus dem String, denn das ist der token
   const token = authHeader.split(' ')[1];
   if (!token) {
     return res.status(401).send();
